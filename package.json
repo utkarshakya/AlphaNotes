@@ -1,0 +1,20 @@
+{
+  "name": "alpha-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "script1": "npx tailwindcss -i ./public/input.css -o ./public/output.css --watch",
+    "script2": "php -S localhost:5000",
+    "dev": "npm-run-all --parallel script1 script2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "flowbite": "^2.5.2",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.14"
+  }
+}
