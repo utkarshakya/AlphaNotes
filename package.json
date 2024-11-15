@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "script1": "npx tailwindcss -i ./public/input.css -o ./public/output.css --watch",
+    "script1": "npx tailwindcss -i ./style/input.css -o ./style/output.css --watch",
     "script2": "php -S localhost:5000",
     "dev": "npm-run-all --parallel script1 script2"
   },
