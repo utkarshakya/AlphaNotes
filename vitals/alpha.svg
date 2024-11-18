@@ -1,9 +1,13 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg fill="#000000" width="800px" height="800px" viewBox="-2.4 -2.4 28.80 28.80" id="alpha" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line" stroke="#000000">
-<g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"/>
-<g id="SVGRepo_iconCarrier">
-<path id="primary" d="M20,6S16.43,19,9.05,19c-5.64,0-6.32-3.35-6-6.23C3.45,9.61,6.35,5,10.74,5c7,0,4.35,14,10.26,14" style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width:2.4;"/>
-</g>
-</svg>
+
+<g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"/>
+
+<g id="SVGRepo_iconCarrier">
+
+<path id="primary" d="M20,6S16.43,19,9.05,19c-5.64,0-6.32-3.35-6-6.23C3.45,9.61,6.35,5,10.74,5c7,0,4.35,14,10.26,14" style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width:2.4;"/>
+
+</g>
+
+</svg>
