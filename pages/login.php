@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <?php include_once "header.php"; ?>
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
     <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
       <div class="mx-auto max-w-lg text-center">
@@ -65,7 +66,7 @@
         <div class="flex items-center justify-between">
           <p class="text-sm text-gray-500">
             No account?
-            <a class="underline" href="./register.html">Sign up</a>
+            <a class="underline" href="./register.php">Sign up</a>
           </p>
 
           <button type="submit" class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
