@@ -1,7 +1,9 @@
 <?php
-include_once __DIR__ . '/../backend/bases.php';
+// Making URLs for easy dynamic navigation.
+include_once __DIR__ . '/../bases.php';
 define('HOME_PAGE', BASE_URL . 'index.php');
 define('LOGIN_PAGE', BASE_URL . 'pages/login.php');
+define('LOGO', BASE_DIRECTORY . 'assets/logos/alpha.svg');
 ?>
 
 <header class="sticky top-0 bg-white z-50">
@@ -9,7 +11,7 @@ define('LOGIN_PAGE', BASE_URL . 'pages/login.php');
     <!-- Logo -->
     <div>
       <a href="<?php echo HOME_PAGE ?>">
-        <img class="h-8 w-auto" src="" alt="Alpha Notes">
+        <img class="h-8 w-auto" src="<?php echo LOGO ?>" alt="Alpha Notes">
       </a>
     </div>
 

@@ -1,6 +1,6 @@
 <?php
-include_once __DIR__ . '/backend/base_url.php';
-define('INDEX_STYLE', BASE_URL . 'style/output.css');
+include_once 'bases.php';
+define('INDEX_STYLE', BASE_DIRECTORY . 'style/output.css');
 ?>
 
 <!DOCTYPE html>
