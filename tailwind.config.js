@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "index.{php, html}",
-    "./pages/*.{php, html}",
+    "./public/pages/*.{php, html}",
+    "./public/views/*.{php, html}",
   ],
   plugins: [
     require('@tailwindcss/forms'),

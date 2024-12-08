@@ -1,8 +1,8 @@
 <?php
 // Making URLs for easy dynamic navigation.
-include_once __DIR__ . '/../bases.php';
+include_once __DIR__ . '/../../bases.php';
 define('HOME_PAGE', BASE_URL . 'index.php');
-define('LOGIN_PAGE', BASE_URL . 'pages/login.php');
+define('LOGIN_PAGE', BASE_URL . 'public/pages/login.php');
 define('LOGO', BASE_DIRECTORY . 'assets/logos/alpha.svg');
 ?>
 

@@ -11,23 +11,23 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="../style/output.css"/>
+    <link rel="stylesheet" href="../../style/output.css" />
 </head>
 
 <body>
-    <?php include_once "./header.php"; ?>
+    <?php include '../views/header.php'; ?>
     <section class="bg-white">
         <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-            <!-- IMAGE SECTION -->
+            <!-- WELCOME SECTION ON LARGE SCREEN -->
             <section class="relative flex h items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
-                <img alt="side-image" src="" class="absolute inset-0 h-full w-full object-cover opacity-60"
+                <img alt="side-image" src="../../assets/images/write4.jpg" class="absolute inset-0 h-full w-full object-cover opacity-60"
                     id="side-image" />
 
                 <!-- WELCOME SECTION ON LARGE SCREENS -->
                 <div class="hidden lg:relative lg:block lg:p-12">
-                    <a class="inline-block text-white" href="../index.php">
+                    <a class="inline-block text-white" href="../../index.php">
                         <span class="sr-only">Home</span>
-                        <img src="../vitals/alpha.svg" alt="alpha" width="50px" style="filter: invert(1)" />
+                        <img src="../../assets/logos/alpha.svg" alt="alpha" width="50px" style="filter: invert(1)" />
                     </a>
 
                     <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
@@ -40,14 +40,14 @@
                     </p>
                 </div>
             </section>
-            <!-- MAIN SECTION -->
+
             <main
                 class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
                 <div class="max-w-xl lg:max-w-3xl">
                     <!-- WELCOME SECTION ON SMALL SCREENS -->
                     <div class="relative -mt-16 block lg:hidden">
                         <a class="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
-                            href="../index.php">
+                            href="../../index.php">
                             <span class="sr-only">Home</span>
                             <img src="../vitals/alpha.svg" alt="alpha" width="50px" />
                         </a>
@@ -61,20 +61,6 @@
                     </div>
                     <!-- FORM SECTION -->
                     <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="FirstName" class="inline-block text-sm font-medium text-gray-700 cursor-pointer">
-                                First Name
-                            </label>
-                            <input type="text" id="FirstName" name="first_name"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
-                        </div>
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="LastName" class="inline-block text-sm font-medium text-gray-700 cursor-pointer">
-                                Last Name
-                            </label>
-                            <input type="text" id="LastName" name="last_name"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
-                        </div>
                         <div class="col-span-6">
                             <label for="Email" class="inline-block text-sm font-medium text-gray-700 cursor-pointer">
                                 Email
@@ -120,21 +106,14 @@
                                </span> -->
                             </div>
                         </div>
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="PasswordConfirmation" class="inline-block text-sm font-medium text-gray-700 cursor-pointer">
-                                Password Confirmation
-                            </label>
-                            <input type="password" id="PasswordConfirmation" name="password_confirmation"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm relative" />
-                        </div>
                         <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button
                                 class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                                Create an account
+                                Login
                             </button>
                             <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                                 Already have an account?
-                                <a href="./login.php" class="text-gray-700 underline">Log in</a>.
+                                <a href="./register.php" class="text-gray-700 underline">Sign Up</a>.
                             </p>
                         </div>
                     </form>
@@ -142,28 +121,7 @@
             </main>
         </div>
     </section>
+    <?php include '../views/footer.php'; ?>
 </body>
-
-
-<script>
-    // GET RANDOM IMAGE
-    let image = document.getElementById("side-image");
-    let num = Math.floor(Math.random() * 3 + 1);
-    image.setAttribute("src", `../vitals/write${num}.jpg`);
-
-    // CONTROL EYE SVG AND PASSWORD VISIBILITY
-    // let closeEye = document.getElementById("close-eye");
-    // let openEye = document.getElementById("open-eye");
-    // let passwordField = document.getElementById("password");
-    // let show = false;
-    // closeEye.addEventListener("click", (e) => {
-    //     closeEye.setAttribute("class", "hidden");
-    //     openEye.setAttribute("class", "block cursor-pointer");
-    //     openEye.addEventListener("click", (e) => {
-    //         openEye.setAttribute("class", "hidden");
-    //         closeEye.setAttribute("class", "block cursor-pointer");
-    //     })
-    // })
-</script>
 
 </html>

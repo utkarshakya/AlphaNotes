@@ -1,6 +1,6 @@
 <?php
-include_once 'bases.php';
-define('INDEX_STYLE', BASE_DIRECTORY . 'style/output.css');
+include_once './bases.php';
+define('STYLE', BASE_DIRECTORY . 'style/output.css');
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +16,12 @@ define('INDEX_STYLE', BASE_DIRECTORY . 'style/output.css');
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo INDEX_STYLE ?>" />
+    <link rel="stylesheet" href="<?php echo STYLE ?>" />
 </head>
 
 <body>
     <div class="bg-white">
-        <?php include_once './pages/header.php'; ?>
+        <?php include_once './public/views/header.php'; ?>
         <main>
             <div class="relative isolate px-6 pt-14 lg:px-8">
                 <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -39,7 +39,7 @@ define('INDEX_STYLE', BASE_DIRECTORY . 'style/output.css');
                             Your Notes And
                             Access From Anywhere, Anytime.</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="pages/register.php"
+                            <a href="./public/pages/register.php"
                                 class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
                                 started</a>
                         </div>
