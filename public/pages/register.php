@@ -49,7 +49,7 @@
                         <a class="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
                             href="../../index.php">
                             <span class="sr-only">Home</span>
-                            <img src="../vitals/alpha.svg" alt="alpha" width="50px" />
+                            <img src="../../assets/logos/alpha.svg" alt="alpha" width="50px" />
                         </a>
                         <h1 class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                             Welcome to Alpha Notes
@@ -92,8 +92,8 @@
                                 <input type="password" id="password" name="password"
                                     class="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                                 <!-- EYE SVG FOR PASSWORD VISIBILITY -->
-                                <!-- <span class="absolute inset-y-0 end-0 grid place-content-center px-4" id="eye-span">
-                                    CLOSE EYE (VIEW OFF)
+                                <span class="absolute inset-y-0 end-0 grid place-content-center px-4" id="eye-span">
+                                    <!-- CLOSE EYE (VIEW OFF) -->
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
                                     color="#000000" fill="none" id="close-eye" class="cursor-pointer">
                                     <path d="M22 8C22 8 18 14 12 14C6 14 2 8 2 8" stroke="currentColor"
@@ -107,7 +107,7 @@
                                        <path d="M9 13.5L7.5 16" stroke="currentColor" stroke-width="1.5"
                                            stroke-linecap="round" stroke-linejoin="round" />
                                    </svg>
-                                   OPEN EYE (VIEW ON)
+                                   <!-- OPEN EYE (VIEW ON) -->
                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
                                        color="#000000" fill="none" id="open-eye" class="hidden">
                                        <path
@@ -117,7 +117,7 @@
                                            d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z"
                                            stroke="currentColor" stroke-width="1.5" />
                                    </svg>
-                               </span> -->
+                               </span>
                             </div>
                         </div>
                         <div class="col-span-6 sm:col-span-3">
@@ -143,28 +143,7 @@
         </div>
     </section>
     <?php include '../views/footer.php'; ?>
+
+    <script src="../../scripts/register.js"></script>
 </body>
-
-
-<script>
-    // GET RANDOM IMAGE
-    let image = document.getElementById("side-image");
-    let num = Math.floor(Math.random() * 3 + 1);
-    image.setAttribute("src", `../../assets/images/write${num}.jpg`);
-
-    // CONTROL EYE SVG AND PASSWORD VISIBILITY
-    // let closeEye = document.getElementById("close-eye");
-    // let openEye = document.getElementById("open-eye");
-    // let passwordField = document.getElementById("password");
-    // let show = false;
-    // closeEye.addEventListener("click", (e) => {
-    //     closeEye.setAttribute("class", "hidden");
-    //     openEye.setAttribute("class", "block cursor-pointer");
-    //     openEye.addEventListener("click", (e) => {
-    //         openEye.setAttribute("class", "hidden");
-    //         closeEye.setAttribute("class", "block cursor-pointer");
-    //     })
-    // })
-</script>
-
 </html>

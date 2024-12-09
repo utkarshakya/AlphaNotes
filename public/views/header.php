@@ -6,7 +6,7 @@ define('LOGIN_PAGE', BASE_URL . 'public/pages/login.php');
 define('LOGO', BASE_DIRECTORY . 'assets/logos/alpha.svg');
 ?>
 
-<header class="sticky top-0 bg-white z-50">
+<header class="sticky top-0 z-50">
   <nav class="flex items-center justify-between p-4 lg:px-12">
     <!-- Logo -->
     <div>

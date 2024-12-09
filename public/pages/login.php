@@ -43,14 +43,9 @@
 
             <main
                 class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
-                <div class="max-w-xl lg:max-w-3xl">
+                <div class="max-w-xl lg:max-w-3xl py-20">
                     <!-- WELCOME SECTION ON SMALL SCREENS -->
                     <div class="relative -mt-16 block lg:hidden">
-                        <a class="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
-                            href="../../index.php">
-                            <span class="sr-only">Home</span>
-                            <img src="../vitals/alpha.svg" alt="alpha" width="50px" />
-                        </a>
                         <h1 class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                             Welcome to Alpha Notes
                         </h1>
