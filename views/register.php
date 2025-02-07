@@ -124,7 +124,7 @@
                             <label for="PasswordConfirmation" class="inline-block text-sm font-medium text-gray-700 cursor-pointer">
                                 Password Confirmation
                             </label>
-                            <input type="password" id="PasswordConfirmation" name="password_confirmation"
+                            <input type="password" id="passwordConfirmation" name="password_confirmation"
                                 class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm relative" />
                         </div>
                         <div class="col-span-6 sm:flex sm:items-center sm:gap-4">

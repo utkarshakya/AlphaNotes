@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./style/input.css -o ./style/output.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./style/input.css -o ./style/output.css --watch",
+    "server": "php -S localhost:8080",
+    "dev": "npm-run-all --parallel tailwind server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.9",
-    "flowbite": "^2.5.2",
-    "npm-run-all": "^2.1.0",
-    "tailwindcss": "^3.4.14"
+    "npm-run-all": "^2.1.0"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.4",
+    "tailwindcss": "^4.0.4"
   }
 }
