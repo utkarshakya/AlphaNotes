@@ -1,8 +1,8 @@
 <?php 
 
-function dd($value){
+function dd($value = null){
     echo '<pre>';
-    var_dump($value);
+    $value === null ?  : var_dump($value);
     echo '</pre>';
     die();
 };
