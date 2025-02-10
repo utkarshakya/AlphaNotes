@@ -1,16 +1,17 @@
 <?php 
 
-require("routes.php");
+$routes = require("routes.php");
 
 // Here we are extracting the actual path from the url.
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-function loadController(string $url, array $routes){
-    array_key_exists($url, $routes) ? require($routes[$url]) : responseError();
+function loadAController(string $url, array $routes){
+    array_key_exists($url, $routes) ? require($routes[$url]) : abortLoading();
 }
 
-function responseError($error = 404){
-    require("controllers/$error.php");
+function abortLoading($responseCode = 404){
+    http_response_code($responseCode);
+    require("controllers/$responseCode.php");
 }
 
-loadController($url, $routes);
+loadAController($url, $routes);

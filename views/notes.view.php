@@ -3,13 +3,13 @@
 <?php require("partials/banner.php") ?>
 
 <main class="w-screen h-screen flex flex-col items-center">
-    <div class="w-full max-w-7xl flex flex-wrap gap-2 justify-center px-5 py-10">
+    <div class="w-full max-w-7xl flex flex-wrap gap-5 px-5 py-10">
         <?php foreach ($result as $record): ?>
-            <div class="w-full sm:w-[300px] h-[150px] sm:h-[200px] border-2 rounded-xs shadow-xl hover:shadow-none p-5 hover:bg-gray-300 cursor-pointer duration-300 text-ellipsis text-sm md:text-base">
-                <span class="text-gray-600 text-ellipsis">
+            <a href="/note?id=<?= $record['id'] ?>">
+                <p class="border-2 rounded-md p-5 cursor-pointer font-semibold text-gray-700 hover:text-black hover:bg-gray-200 hover:shadow-2xl duration-300 ">
                     <?= $record['note'] ?>
-                </span>
-            </div>
+                </p>
+            </a>
         <?php endforeach; ?>
     </div>
 </main>

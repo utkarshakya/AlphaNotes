@@ -1,7 +1,8 @@
 <?php 
 
-$routes = [
+return [
     "/" => "controllers/home.php",
-    "/notes" => "controllers/notes.php",
     "/about" => "controllers/about.php",
+    "/notes" => "controllers/notes.php",
+    "/note" => "controllers/note.php",
 ];
