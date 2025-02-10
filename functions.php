@@ -11,6 +11,8 @@ function isURL(string $value){
    return($value == parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) ? true : false);
 };
 
-function authorize($condition){
-    return($condition ? true : false);
+function authorize($condition, $statusCode = Response::FORBIDDEN){
+    if(! $condition){
+        abort($statusCode);
+    }
 }

@@ -3,6 +3,7 @@
 class Database
 {
     public $connection;
+    public $statement;
 
     public function __construct(string $dbType, array $config, string $username = "root", string $password = "")
     {
@@ -16,8 +17,26 @@ class Database
 
     public function query(string $query, array $params = null)
     {
-        $statement = $this->connection->prepare($query);
-        $statement->execute($params); // we that this params to pass a bound parameters
-        return $statement;
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute($params); // we that this params to pass a bound parameters
+        return $this;
+    }
+
+    public function find()
+    {
+        return $this->statement->fetch();
+    }
+
+    public function findOrAbort()
+    {
+        $result = $this->find();
+        if (! $result) {
+            abort();
+        }
+        return $result;
+    }
+
+    public function get(){
+        return $this->statement->fetchAll();
     }
 }
