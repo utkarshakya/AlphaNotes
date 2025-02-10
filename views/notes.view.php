@@ -12,7 +12,7 @@
             <?php foreach ($result as $record): ?>
                 <a href="/note?id=<?= $record['id'] ?>">
                     <p class="border-2 rounded-md p-5 cursor-pointer font-semibold text-gray-700 hover:text-black hover:bg-gray-200 hover:shadow-2xl duration-300 ">
-                        <?= $record['note'] ?>
+                        <?= htmlspecialchars($record['note']) ?>
                     </p>
                 </a>
                 <?php endforeach; ?>
