@@ -692,6 +692,9 @@
     width: calc(var(--spacing) * 16);
     height: calc(var(--spacing) * 16);
   }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -716,6 +719,9 @@
   .h-\[400px\] {
     height: 400px;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
   }
@@ -730,6 +736,9 @@
   }
   .min-h-full {
     min-height: 100%;
+  }
+  .w-0 {
+    width: calc(var(--spacing) * 0);
   }
   .w-48 {
     width: calc(var(--spacing) * 48);
@@ -915,6 +924,12 @@
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
+  }
+  .bg-gray-200\/50 {
+    background-color: color-mix(in oklab, var(--color-gray-200) 50%, transparent);
   }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
@@ -1221,6 +1236,13 @@
   .focus-within\:cursor-cell {
     &:focus-within {
       cursor: cell;
+    }
+  }
+  .hover\:bg-gray-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
+      }
     }
   }
   .hover\:bg-gray-200 {
