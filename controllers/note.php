@@ -4,7 +4,7 @@ require("Database.php");
 $config = require("config.php");
 $db = new Database("mysql", $config["database"]);
 
-$query = "select * from notes where id = :id";
+$query = "SELECT * FROM `notes` WHERE `id` = :id";
 $result = $db->query($query, [":id" => $_GET['id']])->findOrAbort();
 
 $heading = "Note";

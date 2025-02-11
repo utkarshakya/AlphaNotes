@@ -2,7 +2,7 @@
 <?php require("partials/nav.php") ?>
 <?php require("partials/banner.php") ?>
 
-<main class="w-screen h-screen flex flex-col items-center">
+<main class="w-screen min-h-screen flex flex-col items-center">
     <div class="w-full max-w-7xl flex flex-col gap-5 px-5 py-10">
         <a href="/note-create" class="w-fit">
             <button type="button" class="w-fit px-5 py-3 rounded-md cursor-pointer bg-indigo-500 text-white font-semibold hover:bg-indigo-600 ">Create Note</button>
