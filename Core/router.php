@@ -10,14 +10,4 @@ function loadAController(string $url, array $routes)
     array_key_exists($url, $routes) ? require basePath($routes[$url]) : abort();
 }
 
-function abort($statusCode = 404)
-{
-
-    http_response_code($statusCode);
-
-    require basePath("controllers/$statusCode.php");
-
-    die();
-}
-
 loadAController($url, $routes);
