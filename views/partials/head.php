@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="en" class="bg-gray-100">
 
 <head>
     <meta charset="UTF-8">
@@ -8,5 +8,5 @@
     <link rel="stylesheet" href="style/output.css">
 </head>
 
-<body class="h-full">
-    <div class="min-h-full">
+<body class="w-screen">
+    <div>
