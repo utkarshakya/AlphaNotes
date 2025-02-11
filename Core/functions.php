@@ -2,10 +2,10 @@
 
 use Core\Response;
 
-function dd($value = null)
+function dd($value = "")
 {
     echo '<pre>';
-    $value === null ?: var_dump($value);
+    var_dump($value);
     echo '</pre>';
     die();
 };
