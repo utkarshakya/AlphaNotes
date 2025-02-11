@@ -27,4 +27,4 @@ $heading = "Create Note";
 
 // authorize($result['user_id'] === 1);
 
-require("views/note-create.view.php");
+require("views/notes/create.view.php");

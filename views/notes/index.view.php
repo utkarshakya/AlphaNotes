@@ -1,10 +1,10 @@
-<?php require("partials/head.php") ?>
-<?php require("partials/nav.php") ?>
-<?php require("partials/banner.php") ?>
+<?php require("views/partials/head.php") ?>
+<?php require("views/partials/nav.php") ?>
+<?php require("views/partials/banner.php") ?>
 
 <main class="w-screen min-h-screen flex flex-col items-center">
     <div class="w-full max-w-7xl flex flex-col gap-5 px-5 py-10">
-        <a href="/note-create" class="w-fit">
+        <a href="/notes/create" class="w-fit">
             <button type="button" class="w-fit px-5 py-3 rounded-md cursor-pointer bg-indigo-500 text-white font-semibold hover:bg-indigo-600 ">Create Note</button>
         </a>
         <hr class="text-gray-500">
@@ -20,7 +20,7 @@
     </div>
 </main>
 
-<?php require("partials/foot.php") ?>
+<?php require("views/partials/foot.php") ?>
 <!-- <form action="" method="post">
         <textarea placeholder="Write a note...." class="w-full h-[320px] border-2 rounded-xl border-gray-800 focus:outline-none p-5 resize-none"></textarea>
         <button type="submit"  class="w-full max-w-fit bg-indigo-600 text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-indigo-500">Add Note</button>

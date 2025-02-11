@@ -1,6 +1,6 @@
-<?php require("partials/head.php") ?>
-<?php require("partials/nav.php") ?>
-<?php require("partials/banner.php") ?>
+<?php require("views/partials/head.php") ?>
+<?php require("views/partials/nav.php") ?>
+<?php require("views/partials/banner.php") ?>
 
 <main class="w-screen min-h-screen flex flex-col items-center">
     <div class="w-full max-w-7xl flex flex-col gap-5 px-5 py-10">
@@ -18,4 +18,4 @@
     </div>
 </main>
 
-<?php require("partials/foot.php") ?>
+<?php require("views/partials/foot.php") ?>
