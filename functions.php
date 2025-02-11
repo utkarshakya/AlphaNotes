@@ -16,3 +16,16 @@ function authorize($condition, $statusCode = Response::FORBIDDEN){
         abort($statusCode);
     }
 }
+
+function basePath($path){
+
+   return BASE_PATH . $path;
+    
+}
+
+function view($path, $attributes = []){
+    
+    extract($attributes); // This will extract the values of a array.
+    
+    require basePath("views/{$path}");
+}

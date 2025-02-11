@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i ./style/input.css -o ./style/output.css --watch",
-    "server": "php -S localhost:8080",
+    "server": "php -S localhost:8080 -t public",
     "dev": "npm-run-all --parallel tailwind server"
   },
   "keywords": [],

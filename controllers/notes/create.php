@@ -1,8 +1,7 @@
 <?php
 
 
-require("Database.php");
-$config = require("config.php");
+$config = require basePath("config.php");
 $db = new Database("mysql", $config["database"]);
 
 $message = [];
@@ -23,8 +22,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-$heading = "Create Note";
+view("notes/create.view.php", ["message" => $message, "heading" => "Create Note"]);
 
-// authorize($result['user_id'] === 1);
-
-require("views/notes/create.view.php");

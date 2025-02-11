@@ -1,6 +1,6 @@
-<?php require("views/partials/head.php") ?>
-<?php require("views/partials/nav.php") ?>
-<?php require("views/partials/banner.php") ?>
+<?php require basePath("views/partials/head.php") ?>
+<?php require basePath("views/partials/nav.php") ?>
+<?php require basePath("views/partials/banner.php") ?>
 
 <main class="w-screen min-h-screen flex flex-col items-center">
     <div class="w-full max-w-7xl flex flex-col gap-5 px-5 py-10">
@@ -20,8 +20,4 @@
     </div>
 </main>
 
-<?php require("views/partials/foot.php") ?>
-<!-- <form action="" method="post">
-        <textarea placeholder="Write a note...." class="w-full h-[320px] border-2 rounded-xl border-gray-800 focus:outline-none p-5 resize-none"></textarea>
-        <button type="submit"  class="w-full max-w-fit bg-indigo-600 text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-indigo-500">Add Note</button>
-    </form> -->
+<?php require basePath("views/partials/foot.php") ?>

@@ -1,1 +1,3 @@
-<?php require("views/404.view.php") ?>
+<?php 
+
+view("404.view.php");
