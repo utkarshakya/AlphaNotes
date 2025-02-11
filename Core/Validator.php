@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Validator {
 
     public static function validNote(string $value, $min = 1, $max = INF){
