@@ -662,9 +662,6 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-\[320px\] {
-    height: 320px;
-  }
   .h-full {
     height: 100%;
   }
@@ -691,9 +688,6 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-  .max-w-fit {
-    max-width: fit-content;
   }
   .max-w-xl {
     max-width: var(--container-xl);
@@ -819,9 +813,6 @@
   }
   .border-gray-700 {
     border-color: var(--color-gray-700);
-  }
-  .border-gray-800 {
-    border-color: var(--color-gray-800);
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);

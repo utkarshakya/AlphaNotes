@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./style/input.css -o ./style/output.css --watch",
+    "tailwind": "npx @tailwindcss/cli -i ./public/style/input.css -o ./public/style/output.css --watch",
     "server": "php -S localhost:8080 -t public",
     "dev": "npm-run-all --parallel tailwind server"
   },
