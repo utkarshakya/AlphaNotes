@@ -6,6 +6,6 @@ class Validator {
 
         $value = trim($value);
 
-        return ($value >= $min && $value <= $max);
+        return ((strlen($value) >= $min) && (strlen($value) <= $max));
     }
 }
