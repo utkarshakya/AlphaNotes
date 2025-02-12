@@ -7,14 +7,12 @@
         <form action="/notes" method="post" class="flex flex-col gap-10">
             <div>
                 <label for="note"></label>
-                <textarea required id="note" name="note" rows="5" placeholder="What's on your mind, write it up..." class="w-full border-2 border-gray-500 rounded-md p-5 bg-white"><?= (key_exists('error', $message) && $_SERVER["REQUEST_METHOD"] === "POST") ? $_POST['note'] : '' ?></textarea>
-                <p class="text-sm <?= key_exists('error', $message) ? 'text-red-600' : 'text-green-600' ?> px-3 font-semibold"><?= $_SERVER["REQUEST_METHOD"] === "POST" ? (key_exists('error', $message) ? $message['error'] : $message['success']) : '' ?></p>
+                <textarea required id="note" name="note" rows="10" placeholder="What's on your mind, write it up..." class="w-full border-2 border-gray-500 md:text-xl rounded-md p-5 bg-white"><?= $_POST['note'] ?? "" ?></textarea>
+                <p class="text-sm text-red-600 px-3 font-semibold"><?= !empty($error) ? $error["message"] : '' ?></p>
             </div>
-            <div class="flex justify-end gap-5">
-                <button type="submit" class="w-fit px-3 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white">Save Note</button>
-                <button type="reset" class="w-fit px-3 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white">Reset</button>
-                <!-- <button type="reset" class="font-semibold">Cancel</button> -->
-            </div>
+
+            <button type="submit" class="w-fit px-5 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white">Create Note</button>
+
         </form>
     </div>
 </main>
