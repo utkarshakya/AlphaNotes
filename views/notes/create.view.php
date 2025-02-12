@@ -4,7 +4,7 @@
 
 <main class="w-screen min-h-screen flex flex-col items-center">
     <div class="w-full max-w-7xl flex flex-col gap-5 px-5 py-10">
-        <form method="post" class="flex flex-col gap-10">
+        <form action="/notes" method="post" class="flex flex-col gap-10">
             <div>
                 <label for="note"></label>
                 <textarea required id="note" name="note" rows="5" placeholder="What's on your mind, write it up..." class="w-full border-2 border-gray-500 rounded-md p-5 bg-white"><?= (key_exists('error', $message) && $_SERVER["REQUEST_METHOD"] === "POST") ? $_POST['note'] : '' ?></textarea>
