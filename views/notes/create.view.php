@@ -16,4 +16,6 @@
     </div>
 </main>
 
+<script>loadOnNotesPage()</script>
+
 <?php require basePath("views/partials/foot.php") ?>

@@ -6,6 +6,8 @@ const BASE_PATH = __DIR__ . '/../';
 
 require BASE_PATH . "Core/functions.php";
 
+session_start();
+
 spl_autoload_register(function ($class){
     
     $class = str_replace("\\", "/", $class);
