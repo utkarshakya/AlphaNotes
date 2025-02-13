@@ -6,6 +6,12 @@ use Core\Validator;
 $config = require basePath("config.php");
 $db = new Database("mysql", $config["database"]);
 
+$currentUser = 1;
+
+$result = $db->query("SELECT * FROM `users` WHERE `id` = :id", [
+    ":id" => $currentUser
+])->findOrAbort();
+
 $error = [];
 
 if (!(Validator::validNote($_POST['note'], 1, 2500))) {
