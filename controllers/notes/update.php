@@ -1,10 +1,10 @@
 <?php
 
+use Core\App;
 use Core\Database;
 use Core\Validator;
 
-$config = require basePath("config.php");
-$db = new Database("mysql", $config["database"]);
+$db = App::resolve(Database::class);
 
 $result = $db->query("SELECT * FROM `notes` WHERE `id` = :id", [
     ":id" => $_POST['id']

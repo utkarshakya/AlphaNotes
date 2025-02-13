@@ -1,9 +1,9 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-$config = require basePath("config.php");
-$db = new Database("mysql", $config["database"]);
+$db = App::resolve(Database::class);
 
 $currentUser = 1;
 

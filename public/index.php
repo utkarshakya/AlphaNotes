@@ -10,8 +10,10 @@ spl_autoload_register(function ($class){
     
     $class = str_replace("\\", "/", $class);
     require basePath("{$class}.php");
-    
+
 });
+
+require basePath("bootstrap.php");
 
 $router = new Router;
 
