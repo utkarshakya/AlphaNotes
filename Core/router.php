@@ -28,6 +28,10 @@ class Router
     {
         $this->addRoutes($url, $controller, "DELETE");
     }
+    public function update($url, $controller)
+    {
+        $this->addRoutes($url, $controller, "UPDATE");
+    }
     public function patch($url, $controller)
     {
         $this->addRoutes($url, $controller, "PATCH");

@@ -6,13 +6,9 @@ use Core\Validator;
 $config = require basePath("config.php");
 $db = new Database("mysql", $config["database"]);
 
-$currentUser = 1;
-$result = $db->query("SELECT * FROM `notes` WHERE `id` = :id", [":id" => $_POST['id']]);
-authorize($result['user_id'] === $currentUser);
-
 $error = [];
 
-if (!(Validator::validNote($_POST['note'], 1, 1000))) {
+if (!(Validator::validNote($_POST['note'], 1, 2500))) {
     $error['message'] = "A Note Can Not Be More Than 1000 Character";
 }
 

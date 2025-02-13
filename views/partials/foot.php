@@ -4,7 +4,7 @@
     </div>
 </footer>
 </div>
-
+<script src="/scripts/functions.js"></script>
 </body>
 
 </html>
