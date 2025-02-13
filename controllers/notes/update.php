@@ -6,10 +6,13 @@ use Core\Validator;
 $config = require basePath("config.php");
 $db = new Database("mysql", $config["database"]);
 
-$result = [
-    'id' => $_POST['id'],
-    'note' => $_POST['note']
-];
+$result = $db->query("SELECT * FROM `notes` WHERE `id` = :id", [
+    ":id" => $_POST['id']
+])->findOrAbort();
+
+$currentUser = 1;
+
+authorize($result['user_id'] === $currentUser);
 
 $error = [];
 

@@ -5,9 +5,15 @@ use Core\Database;
 $config = require basePath("config.php");
 $db = new Database("mysql", $config["database"]);
 
-$query = "DELETE FROM `notes` WHERE `id` = :id";
+$currentUser = 2;
 
-$result = $db->query($query, [
+$result = $db->query("SELECT `user_id` FROM `notes` WHERE `id` = :id", [
+    ":id" => $_POST['id']
+])->findOrAbort();
+
+authorize($result['user_id'] === $currentUser);
+
+$db->query("DELETE FROM `notes` WHERE `id` = :id", [
     ':id' => $_POST['id']
 ]);
 
