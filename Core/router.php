@@ -2,6 +2,10 @@
 
 namespace Core;
 
+use Core\Middleware\Auth;
+use Core\Middleware\Guest;
+use Core\Middleware\Middleware;
+
 class Router
 {
 
@@ -12,29 +16,38 @@ class Router
         $this->routes[] = [
             "url" => $url,
             "controller" => $controller,
-            "method" => $method
+            "method" => $method,
+            "middleware" => null
         ];
+
+        return $this;
     }
 
     public function get($url, $controller)
     {
-        $this->addRoutes($url, $controller, "GET");
+        return $this->addRoutes($url, $controller, "GET");
     }
     public function post($url, $controller)
     {
-        $this->addRoutes($url, $controller, "POST");
+        return $this->addRoutes($url, $controller, "POST");
     }
     public function delete($url, $controller)
     {
-        $this->addRoutes($url, $controller, "DELETE");
+        return $this->addRoutes($url, $controller, "DELETE");
     }
     public function patch($url, $controller)
     {
-        $this->addRoutes($url, $controller, "PATCH");
+        return $this->addRoutes($url, $controller, "PATCH");
     }
     public function put($url, $controller)
     {
-        $this->addRoutes($url, $controller, "PUT");
+        return $this->addRoutes($url, $controller, "PUT");
+    }
+
+    public function only($value)
+    {
+        $this->routes[array_key_last($this->routes)]['middleware'] = $value;
+        return $this;
     }
 
     public function route($url, $method)
@@ -42,10 +55,12 @@ class Router
         foreach ($this->routes as $record) {
 
             if (($record["url"] === $url) && ($record["method"] === strtoupper($method))) {
+
+                Middleware::resolve($record['middleware']);
                 return (require basePath($record["controller"]));
+                
             }
         }
         abort();
     }
-
 }
