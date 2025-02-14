@@ -34,7 +34,7 @@
                                     <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 </button>
                             <?php else: ?>
-                                <a href="/register" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Sign Up</a>
+                                <a href="/session" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Log In</a>
                             <?php endif; ?>
                         </div>
                         <!--

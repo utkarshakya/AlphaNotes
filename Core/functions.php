@@ -39,3 +39,11 @@ function abort($statusCode = 404)
     require basePath("controllers/$statusCode.php");
     die();
 }
+
+function login(array $userData)
+{
+    $_SESSION['loggedIn'] = true;
+    $_SESSION['user'] = $userData;
+}
+
+function logout() {}

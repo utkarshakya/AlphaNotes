@@ -44,8 +44,7 @@
             </form>
 
             <p class="mt-10 text-center text-sm/6 text-gray-500">
-                Already A Member?
-                <a href="/login" class="font-semibold text-indigo-600 hover:text-indigo-500">Log In</a>
+                Already A Member?<a href="/session" class="font-semibold text-indigo-600 hover:text-indigo-500">Log In</a>
             </p>
         </div>
     </div>

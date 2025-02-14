@@ -10,5 +10,9 @@ $router->post("/notes", "controllers/notes/store.php");
 $router->patch("/notes", "controllers/notes/update.php");
 $router->delete("/notes", "controllers/notes/destroy.php");
 
-$router->get("/register", "controllers/auth/register.php")->only("guest");
-$router->post("/register", "controllers/auth/store.php");
+$router->get("/register", "controllers/register/create.php")->only("guest");
+$router->post("/register", "controllers/register/store.php")->only("guest");
+
+$router->get("/session", "controllers/session/create.php")->only("guest");
+$router->post("/session", "controllers/session/store.php")->only("guest");
+

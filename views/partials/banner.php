@@ -1,5 +1,6 @@
 <?php 
-$name = explode(' ', $_SESSION['username'])[0];
+$name = $_SESSION['user']['name'] ?? "Guest";
+$name = explode(' ', $name)[0];
 $greeting = ["Hello", "Hola", "Namaste", "Konnichiwa", "Ni hao"];
 $index = rand(0,4);
 ?>
