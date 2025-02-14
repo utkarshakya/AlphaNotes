@@ -10,7 +10,9 @@
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/" class="<?= isURL("/") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md  px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
                         <a href="/about" class="<?= isURL("/about") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">About</a>
-                        <a href="/notes" class="<?= isURL("/notes") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Notes</a>
+                        <?php if ($_SESSION['loggedIn'] ?? false): ?>
+                            <a href="/notes" class="<?= isURL("/notes") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Notes</a>
+                        <?php endif ?>
                     </div>
                 </div>
             </div>
@@ -56,14 +58,14 @@
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:outline-hidden" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                         </div>
                     </div>
-                                
-                    <?php if($_SESSION['loggedIn'] ?? false): ?>
-                    <div class="mx-3">
-                        <form action="/session" method="post">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Logout</button>
-                        </form>
-                    </div>
+
+                    <?php if ($_SESSION['loggedIn'] ?? false): ?>
+                        <div class="mx-3">
+                            <form action="/session" method="post">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Logout</button>
+                            </form>
+                        </div>
                     <?php endif ?>
                 </div>
             </div>
