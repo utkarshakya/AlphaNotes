@@ -16,7 +16,7 @@ authorize($result['user_id'] === $currentUser);
 
 $error = [];
 
-if (!(Validator::validNote($_POST['note'], 1, 2500))) {
+if (!(Validator::string($_POST['note'], 1, 2500))) {
     $error['message'] = "A Note Can Not Be More Than 2500 Character";
 }
 

@@ -14,7 +14,7 @@ $result = $db->query("SELECT * FROM `users` WHERE `id` = :id", [
 
 $error = [];
 
-if (!(Validator::validNote($_POST['note'], 1, 2500))) {
+if (!(Validator::string($_POST['note'], 1, 2500))) {
     $error['message'] = "A Note Can Not Be More Than 1000 Character";
 }
 

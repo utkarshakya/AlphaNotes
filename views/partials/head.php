@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="/style/output.css">
     <script src="/scripts/functions.js"></script>
+    <script src="./scripts/register.js"></script>
 </head>
 
 <body class="w-screen">

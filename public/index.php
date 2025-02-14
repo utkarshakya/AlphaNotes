@@ -1,6 +1,7 @@
 <?php
 
 use Core\Router;
+use Core\Validator;
 
 const BASE_PATH = __DIR__ . '/../';
 
