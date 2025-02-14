@@ -37,6 +37,7 @@
                                 <a href="/session" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Log In</a>
                             <?php endif; ?>
                         </div>
+
                         <!--
                             Dropdown menu, show/hide based on menu state.
 
@@ -55,6 +56,15 @@
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:outline-hidden" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                         </div>
                     </div>
+                                
+                    <?php if($_SESSION['loggedIn'] ?? false): ?>
+                    <div class="mx-3">
+                        <form action="/session" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Logout</button>
+                        </form>
+                    </div>
+                    <?php endif ?>
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">

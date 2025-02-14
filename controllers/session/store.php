@@ -29,10 +29,12 @@ $result = $db->query("SELECT * FROM `users` WHERE `email` = :email", [
 if ($result) {
     if (password_verify($_POST['password'], $result['password'])) {
         login([
+            "id" => $result['id'],
             "name" => $result['name'],
             "email" => $result['email']
         ]);
-        header("Location : /");
+
+        header("Location: /");
         die();
     }
 }
