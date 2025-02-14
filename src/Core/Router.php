@@ -57,7 +57,7 @@ class Router
             if (($record["url"] === $url) && ($record["method"] === strtoupper($method))) {
 
                 Middleware::resolve($record['middleware']);
-                return (require basePath($record["controller"]));
+                return (require basePath("Http/controllers/" . $record["controller"]));
                 
             }
         }

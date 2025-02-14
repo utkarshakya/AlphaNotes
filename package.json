@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./public/style/input.css -o ./public/style/output.css --watch",
-    "server": "php -S localhost:8080 -t public",
+    "tailwind": "npx @tailwindcss/cli -i src/public/style/input.css -o src/public/style/output.css --watch",
+    "server": "php -S localhost:8080 -t src/public",
     "dev": "npm-run-all --parallel tailwind server"
   },
   "keywords": [],
