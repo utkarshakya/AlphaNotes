@@ -1,7 +1,7 @@
 <?php
 
+use Core\Authenticator;
 use Core\Router;
-use Core\Validator;
 
 const BASE_PATH = __DIR__ . '/../';
 
@@ -26,3 +26,5 @@ $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $method = $_POST["_method"] ?? $_SERVER["REQUEST_METHOD"];
 
 $router->route($url, $method);
+
+Authenticator::flashOut("errors");
