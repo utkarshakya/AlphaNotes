@@ -1,12 +1,13 @@
 <?php
 
 use Core\Authenticator;
+use Core\Session;
 use Http\Forms\Form;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-Authenticator::flash("temp", [
+Session::flash("temp", [
     "email" => $email,
     "password" => $password
 ]);
@@ -23,6 +24,6 @@ if ($form->validate($email, $password)) {
     $form->setErrors("message", "No Record Found Or Password Is Incorrect, Try Again!");
 }
 
-Authenticator::flash("errors", $form->getErrors());
+Session::flash("errors", $form->getErrors());
 
 redirect("/session");

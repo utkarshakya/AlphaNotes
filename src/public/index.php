@@ -27,4 +27,4 @@ $method = $_POST["_method"] ?? $_SERVER["REQUEST_METHOD"];
 
 $router->route($url, $method);
 
-Authenticator::flashOut("errors");
+Session::flashOut("errors");

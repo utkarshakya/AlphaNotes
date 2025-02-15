@@ -43,18 +43,4 @@ class Authenticator
         setcookie("PHPSESSID", "", time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
     }
 
-    public static function flash(string $key, array $value)
-    {
-        $_SESSION[$key] = [];
-        $_SESSION[$key] = $value;
-    }
-
-    public static function flashOut(string $key = null)
-    {
-        if ($_SESSION[$key] ?? false) {
-            $_SESSION[$key] = [];
-        } else {
-            $_SESSION = [];
-        }
-    }
 }

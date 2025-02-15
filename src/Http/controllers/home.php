@@ -1,3 +1,3 @@
 <?php
 
-view("home.view.php",);
+view("home.view.php");
