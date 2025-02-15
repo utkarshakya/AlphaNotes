@@ -2,7 +2,7 @@
 <?php require("partials/nav.php") ?>
 <?php require("partials/banner.php") ?>
 
-<main class="h-screen px-6 pt-14 lg:px-8">
+<main class="px-6 pt-14 lg:px-8">
     <div class="mx-auto max-w-2xl py-32">
         <div class="text-center">
             <h1 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 md:text-7xl">Capture

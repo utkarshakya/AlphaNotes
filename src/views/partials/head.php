@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-100">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,5 +10,4 @@
     <script src="./scripts/register.js"></script>
 </head>
 
-<body class="w-screen">
-    <div>
+<body class="min-h-screen w-screen flex flex-col">

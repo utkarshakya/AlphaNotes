@@ -22,3 +22,15 @@ function editNote($textareaID, $clickedButtonID, $showButtonID) {
     showButton.removeAttribute("hidden");
     
 }
+
+function navMenu(){
+
+    const hamburger = document.getElementById("hamburger")
+    const mobileMenu = document.getElementById("mobile-menu")
+
+    hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("h-[0px]")
+        mobileMenu.classList.toggle("overflow-hidden")
+    })
+
+}

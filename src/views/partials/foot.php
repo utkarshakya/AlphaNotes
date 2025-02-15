@@ -3,7 +3,6 @@
         <p>Made with ❤️ by Utkarsh Shakya</p>
     </div>
 </footer>
-</div>
 
 </body>
 
