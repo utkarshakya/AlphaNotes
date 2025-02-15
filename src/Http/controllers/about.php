@@ -1,6 +1,3 @@
-<?php 
+<?php
 
-view(
-    "home.view.php",
-    ["heading" => "About"]
-);
+view("about.view.php");

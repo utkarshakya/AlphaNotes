@@ -3,7 +3,7 @@
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
-                    <img class="size-8 invert" src="/assets/logos/alpha.svg" alt="Your Company">
+                    <img class="size-8 invert" src="/assets/icons/alpha.svg" alt="Your Company">
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
@@ -84,9 +84,13 @@
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium">Logout</button>
                 </form>
+            <?php else: ?>
+                <a href="/session">
+                    <button type="submit" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium">Login</button>
+                </a>
             <?php endif ?>
         </div>
-        <?php if ($_SESSION["loggedIn"]): ?>
+        <?php if ($_SESSION["loggedIn"] ?? false): ?>
             <div class="border-t border-gray-700 pt-4 pb-3">
                 <div class="flex items-center px-5">
                     <div class="shrink-0">
