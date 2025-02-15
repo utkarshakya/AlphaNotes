@@ -36,7 +36,7 @@ function view($path, $attributes = [])
 function abort($statusCode = 404)
 {
     http_response_code($statusCode);
-    require basePath("controllers/$statusCode.php");
+    require basePath("Http/controllers/status/$statusCode.php");
     die();
 }
 
