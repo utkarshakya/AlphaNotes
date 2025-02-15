@@ -4,22 +4,29 @@ namespace Http\Forms;
 
 use Core\Validator;
 
-class LoginForm
+class Form
 {
 
     protected $errors = [];
 
-    public function validate($email, $password)
+    public function validate($email, $password, $fullName = null)
     {
-
+        
         if (!Validator::email($email)) {
-            $this->errors["email"] = "Invalid Email";
+            $this->errors['email'] = "Invalid Email";
             return false;
         }
 
         if (!Validator::password($password)) {
             $this->errors['password'] = "Invalid Password";
             return false;
+        }
+
+        if($fullName){
+            if (!Validator::string($fullName)) {
+                $this->errors['full-name'] = "This Field Can Not To Empty";
+                return false;
+            }
         }
 
         return true;

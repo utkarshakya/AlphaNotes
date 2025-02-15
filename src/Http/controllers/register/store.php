@@ -1,6 +1,7 @@
 <?php
 
 use Core\App;
+use Core\Authenticator;
 use Core\Database;
 use Core\Validator;
 
@@ -46,10 +47,9 @@ $db->query("INSERT INTO `users` (`name`, `email`, `password`) VALUES(:name, :ema
     ":password" => password_hash($_POST['password'], PASSWORD_DEFAULT)
 ]);
 
-login([
+Authenticator::login([
     "name" => $_POST['name'],
     "email" => $_POST['email']
 ]);
 
-header("Location: /");
-die();
+redirect("/");
