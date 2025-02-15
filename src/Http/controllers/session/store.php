@@ -16,7 +16,7 @@ $form = new Form;
 
 if ($form->validate($email, $password)) {
 
-    if ((new Authenticator)->authenticate($email, $password)) {
+    if (Authenticator::authenticate($email, $password)) {
 
         redirect("/");
     }

@@ -1,7 +1,7 @@
 <?php
 
-use Core\Authenticator;
 use Core\Router;
+use Core\Session;
 
 const BASE_PATH = __DIR__ . '/../';
 
@@ -27,4 +27,4 @@ $method = $_POST["_method"] ?? $_SERVER["REQUEST_METHOD"];
 
 $router->route($url, $method);
 
-Session::flashOut("errors");
+Session::flashOutKey("errors");

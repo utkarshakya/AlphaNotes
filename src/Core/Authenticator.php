@@ -5,7 +5,7 @@ namespace Core;
 class Authenticator
 {
 
-    public function authenticate(string $email, string $password)
+    public static function authenticate(string $email, string $password)
     {
 
         $result = App::resolve(Database::class)->query("SELECT * FROM `users` WHERE `email` = :email", [

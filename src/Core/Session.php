@@ -1,14 +1,17 @@
-<?php 
+<?php
 
 namespace Core;
 
-class Session{
+class Session
+{
 
-    public static function has(string $key){
+    public static function has(string $key)
+    {
         return (bool)Session::get($key);
     }
 
-    public static function get(string $key, $default = null){
+    public static function get(string $key, $default = null)
+    {
         return $_SESSION[$key] ?? $default;
     }
 
@@ -18,13 +21,16 @@ class Session{
         $_SESSION[$key] = $value;
     }
 
-    public static function flashOut(string $key = null)
+    public static function flashOutKey(string $key)
     {
         if ($_SESSION[$key] ?? false) {
             $_SESSION[$key] = [];
-        } else {
-            $_SESSION = [];
+            return true;
         }
+        return false;
+    }
+
+    public static function flashOutAll(){
+        $_SESSION = [];
     }
 }
-?>
