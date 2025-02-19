@@ -2,6 +2,7 @@
 
 $router->get("/", "home.php");
 $router->get("/about", "about.php");
+$router->get("/contribute", "contribute.php");
 
 $router->get("/notes", "notes/index.php")->only("auth");
 $router->get("/note", "notes/show.php");

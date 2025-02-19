@@ -6,7 +6,7 @@ if ($_SESSION['loggedIn'] ?? false) {
 }
 ?>
 
-<main class="min-h-[90vh] px-6 pt-10">
+<main class="w-full max-w-7xl mx-auto px-6 pt-10 bg-gray-50">
     <div class="mx-auto max-w-2xl py-32">
         <div class="text-center">
             <h1 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 md:text-7xl">Capture ideas, Organize thoughts, Elevate creativity.</h1>

@@ -1,18 +1,19 @@
-<nav class="bg-gray-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<nav class="w-full max-w-7xl">
+    <div class="px-4 sm:px-6 lg:px-8 py-3">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
-                    <img class="size-8 invert" src="/assets/icons/alpha.svg" alt="Your Company">
+                    <img class="size-8 dark:invert" src="/assets/icons/alpha.svg" alt="Your Company">
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="/" class="<?= isURL("/") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md  px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                        <a href="/about" class="<?= isURL("/about") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">About</a>
+                        <a href="/" class="<?= isURL("/") ? 'bg-gray-300 dark:bg-gray-900' : 'text-gray-700 hover:text-black hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white' ?> rounded-md  px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+                        <a href="/about" class="<?= isURL("/about") ? 'bg-gray-300 dark:bg-gray-900' : 'text-gray-700 hover:text-black hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">About</a>
+                        <a href="/contribute" class="<?= isURL("/contribute") ? 'bg-gray-300 dark:bg-gray-900' : 'text-gray-700 hover:text-black hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Contribute</a>
                         <?php
 
                         if ($_SESSION['loggedIn'] ?? false): ?>
-                            <a href="/notes" class="<?= isURL("/notes") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Notes</a>
+                            <a href="/notes" class="<?= isURL("/notes") ? 'bg-gray-300 dark:bg-gray-900' : 'text-gray-700 hover:text-black hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Notes</a>
                         <?php endif ?>
                     </div>
                 </div>
@@ -30,7 +31,7 @@
                                     <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 </button>
                             <?php else: ?>
-                                <a href="/session" class="text-gray-200 text-sm font-semibold hover:bg-gray-700 rounded-md py-2 px-3">Log In</a>
+                                <a href="/session" class="dark:text-gray-200 text-sm font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md py-2 px-3">Log In</a>
                             <?php endif; ?>
                         </div>
 
@@ -75,6 +76,7 @@
             <div class="flex gap-3">
                 <a href="/" class="<?= isURL("/") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md  px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
                 <a href="/about" class="<?= isURL("/about") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">About</a>
+                <a href="/contribute" class="<?= isURL("/contribute") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Contribute</a>
                 <?php if ($_SESSION['loggedIn'] ?? false): ?>
                     <a href="/notes" class="<?= isURL("/notes") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Notes</a>
                 <?php endif ?>
