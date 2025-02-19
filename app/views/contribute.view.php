@@ -6,46 +6,48 @@ if ($_SESSION['loggedIn'] ?? false) {
 }
 ?>
 
-<main class="min-h-screen px-6 pt-14 lg:px-8">
-Contribute to [Your Website Name]
-Thank you for your interest in contributing to [Your Website Name]! Our project is open source, and we welcome contributions from developers, designers, writers, and enthusiasts who believe in making note-taking simpler and more accessible for everyone.
+<main class="min-h-screen w-full max-w-7xl mx-auto bg-gray-50 flex flex-col items-center px-6 py-10 lg:py-20 lg:px-12">
+    <div class="w-full  mb-12">
+        <h1 class="text-2xl lg:text-5xl font-bold text-gray-900">Contribute to Alpha Notes</h1>
+        <p class="mt-4 text-base lg:text-lg text-gray-600">Thank you for your interest in contributing to Alpha Notes! Our project is open source, and we welcome contributions from developers, designers, writers, and enthusiasts who believe in making note-taking simpler and more accessible for everyone.</p>
+    </div>
 
-Why Contribute?
-Community-Driven: We believe the best improvements come from diverse perspectives. Your contributions help shape the future of our application.
-Learn & Grow: Collaborating on an open source project is a great opportunity to learn new skills, work with modern technologies, and gain real-world experience.
-Make an Impact: Help us enhance features, fix bugs, improve documentation, or suggest new ideas that can benefit thousands of users worldwide.
-How to Get Started
-1. Explore Our Repository
-Visit our GitHub repository to explore the project, read the source code, and get a sense of our current development.
+    <div class="w-full mb-12 ">
+        <h2 class="text-xl lg:text-3xl font-semibold text-gray-800">Why Contribute?</h2>
+        <ul class="mt-4 space-y-3 text-gray-700 text-base lg:text-lg">
+            <li><span class="font-medium">Community-Driven:</span> Your contributions help shape the future of our application.</li>
+            <li><span class="font-medium">Learn & Grow:</span> Collaborating on an open-source project is a great opportunity to gain real-world experience.</li>
+            <li><span class="font-medium">Make an Impact:</span> Help us enhance features, fix bugs, improve documentation, or suggest new ideas that can benefit thousands of users worldwide.</li>
+        </ul>
+    </div>
 
-2. Read Our Contribution Guidelines
-Before diving in, please check out our Contribution Guidelines. These guidelines cover:
+    <div class="w-full mb-12 ">
+        <h2 class="text-xl lg:text-3xl font-semibold text-gray-800">How to Get Started</h2>
+        <ol class="mt-4 space-y-3 text-gray-700 text-base lg:text-lg list-decimal list-inside">
+            <li><span class="font-medium">Explore Our Repository:</span> Visit our GitHub to explore the project and read the source code.</li>
+            <li><span class="font-medium">Read Our Contribution Guidelines:</span> Learn how to set up your development environment and follow coding standards.</li>
+            <li><span class="font-medium">Find an Issue or Start a Discussion:</span> Check out the Issues page or join our community chat.</li>
+            <li><span class="font-medium">Make Your Changes:</span> Fork, clone, develop, test, and submit a pull request!</li>
+            <li><span class="font-medium">Follow Our Code of Conduct:</span> Ensure a respectful and productive environment for everyone.</li>
+        </ol>
+    </div>
 
-How to set up your development environment
-Coding standards and best practices
-Branching and commit message conventions
-How to write and run tests
-3. Find an Issue or Start a Discussion
-Bug Reports & Feature Requests: Browse our Issues page for bugs or feature requests. If you have a new idea, feel free to open a discussion!
-Good First Issues: We tag certain issues as "good first issues" to help newcomers find a starting point.
-Community Chat: Join our Discord/Slack/Forum channel to discuss ideas, ask questions, or get help from the community.
-4. Make Your Changes
-Fork & Clone: Fork our repository and clone it to your local machine.
-Develop & Test: Make your changes in a dedicated branch. Test thoroughly to ensure your changes work as expected.
-Submit a Pull Request: Once your changes are ready, open a pull request. We’ll review your submission and provide feedback.
-5. Follow Our Code of Conduct
-We expect all contributors to follow our Code of Conduct. This ensures a welcoming, respectful, and productive environment for everyone involved.
+    <div class="w-full mb-12 ">
+        <h2 class="text-xl lg:text-3xl font-semibold text-gray-800">What Can You Contribute?</h2>
+        <ul class="mt-4 space-y-3 text-gray-700 text-base lg:text-lg">
+            <li><span class="font-medium">Code Improvements:</span> Bug fixes, new features, and performance enhancements.</li>
+            <li><span class="font-medium">Documentation:</span> Enhancing user guides, developer docs, and creating tutorials.</li>
+            <li><span class="font-medium">Design & UX:</span> Suggestions for improving the user interface and experience.</li>
+            <li><span class="font-medium">Testing:</span> Writing tests and improving testing infrastructure.</li>
+            <li><span class="font-medium">Feedback:</span> Ideas and suggestions to make note-taking more effective.</li>
+        </ul>
+    </div>
 
-What Can You Contribute?
-Code Improvements: Bug fixes, new features, refactoring, and performance enhancements.
-Documentation: Enhancing user guides, developer docs, or creating tutorials to help others get started.
-Design & UX: Suggestions for improving the user interface and overall user experience.
-Testing: Writing tests and improving our testing infrastructure.
-Feedback: Ideas and suggestions on how to improve the project or make note-taking even more effective.
-Thank You!
-Every contribution, big or small, is valuable. We appreciate your help in making [Your Website Name] a better platform for note-taking and organization. If you have any questions or need support, don't hesitate to reach out through our community channels.
-
-Happy coding and thank you for contributing!
+    <div class="w-full ">
+        <h2 class="text-xl lg:text-3xl font-semibold text-gray-800">Thank You!</h2>
+        <p class="mt-4 text-base lg:text-lg text-gray-600">Every contribution, big or small, is valuable. Thank you for helping us make Alpha Notes a better platform for note-taking and organization. Happy coding!</p>
+    </div>
 </main>
+
 
 <?php require("partials/foot.php") ?>

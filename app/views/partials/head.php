@@ -11,4 +11,4 @@
     <script src="./scripts/register.js"></script>
 </head>
 
-<body class="flex flex-col items-center bg-gray-100 dark:bg-slate-800">
+<body class="flex flex-col items-center bg-gray-100 dark:bg-slate-800 dark:text-white">
