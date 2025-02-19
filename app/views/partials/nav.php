@@ -1,6 +1,6 @@
 <nav class="w-full max-w-7xl">
     <div class="px-4 sm:px-6 lg:px-8 py-3">
-        <div class="flex h-16 items-center justify-between">
+        <div class="flex lg:py-3 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
                     <img class="size-8 dark:invert" src="/assets/icons/alpha.svg" alt="Your Company">
