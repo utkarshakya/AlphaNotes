@@ -1,5 +1,5 @@
-<?php require basePath("views/partials/head.php") ?>
-<?php require basePath("views/partials/nav.php") ?>
+<?php require baseAppPath("views/partials/head.php") ?>
+<?php require baseAppPath("views/partials/nav.php") ?>
 
 <main class="w-full max-w-7xl mx-auto bg-gray-50 flex flex-col items-center px-6 py-10 lg:py-20 lg:px-12">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -27,20 +27,21 @@
                     <input type="password" name="password" id="password" autocomplete="current-password" required value="<?= $_SESSION['temp']['password'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                     <p class="text-red-500 text-xs p-1 font-semibold"><?= $_SESSION['errors']['password'] ?? '' ?></p>
                 </div>
+                <p class="text-red-500 text-xs p-1 font-semibold text-center"><?= $_SESSION['errors']['message'] ?? '' ?></p>
             </div>
+            
 
             <div>
                 <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log In</button>
             </div>
 
-            <p class="text-red-500 text-xs p-1 font-semibold text-center"><?= $_SESSION['errors']['message'] ?? '' ?></p>
         </form>
 
-        <p class="text-center text-sm/6 text-gray-500">
+        <p class="mt-5 text-center text-sm/6 text-gray-500">
             Not A Member?
             <a href="/register" class="font-semibold text-indigo-600 hover:text-indigo-500">Sign Up</a>
         </p>
     </div>
 </main>
 
-<?php require basePath("views/partials/foot.php") ?>
+<?php require baseAppPath("views/partials/foot.php") ?>

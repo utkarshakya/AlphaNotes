@@ -8,7 +8,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="/style/output.css">
     <script src="/scripts/functions.js"></script>
-    <script src="./scripts/register.js"></script>
 </head>
 
 <body class="flex flex-col items-center bg-gray-100 dark:bg-slate-800 dark:text-white">
