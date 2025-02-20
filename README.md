@@ -1,11 +1,13 @@
 # Alpha Notes
 
-Alpha Notes is a simple note-taking application that allows users to create, read, update, and delete notes. It is built with PHP and uses a MySQL database to store notes. This project uses Composer for dependency management and Docker for containerization.
+Alpha Notes is a simple note-taking application that allows users to create, read, update, and delete notes. It is built with PHP and uses a MySQL database to store notes. This project is a PHP application that uses Composer for dependency management and Docker for containerization. It includes an Apache server with PHP support and various PHP extensions. The frontend is built with HTML, Tailwindcss, and JavaScript.
 
 ## Requirements
 
 - Docker
 - PHP 8.2
+- Node.js
+- Composer (Optional)
 
 ## Installation
 
@@ -36,6 +38,37 @@ Alpha Notes is a simple note-taking application that allows users to create, rea
     npm install
     ```
 
-## Usage
+5. Access the application in your web browser at `http://localhost:8080`.
 
-- Access the application in your web browser at `http://localhost:8080`.
+## To Run Locally Without Docker
+
+### Local Requirements
+
+- PHP 8.2
+- MySQL
+- Node.js
+- Composer
+
+### Steps
+
+- After cloning the repository, follow these steps to run the application locally:
+
+1. Install PHP dependencies:
+
+    ```sh
+    composer install
+    ```
+
+2. Install frontend dependencies:
+
+    ```sh
+    npm install
+    ```
+
+3. Start the PHP development server:
+
+    ```sh
+    npm run dev
+    ```
+
+4. Access the application in your web browser at `http://localhost:8000`.
