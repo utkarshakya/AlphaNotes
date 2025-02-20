@@ -10,4 +10,5 @@ services:
     #   - .:/var/www/localhost/htdocs/
     # ports:
     #   - "8080:80"
-    # Uncomment the above things for Local Development Environment.
+    # env_file:
+    #   - .env

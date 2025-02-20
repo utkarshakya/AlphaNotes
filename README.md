@@ -28,7 +28,7 @@ Alpha Notes is a simple note-taking application that allows users to create, rea
 
 3. Build and start the Docker containers:
 
-    - Before running the following command, uncomment the volumes and ports in the [docker-compose.yml](docker-compose.yml) file.
+    - Before running the following command, uncomment the volumes, ports, and env_file in the [docker-compose.yml](docker-compose.yml) file.
 
     ```sh
     docker-compose up --build -d
