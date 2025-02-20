@@ -1,0 +1,13 @@
+services:
+  web-app:
+    container_name: alpha-notes
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lite-php-apache
+
+    # volumes:
+    #   - .:/var/www/localhost/htdocs/
+    # ports:
+    #   - "8080:80"
+    # Uncomment the above things for Local Development Environment.
