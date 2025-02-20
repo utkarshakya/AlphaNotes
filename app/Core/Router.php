@@ -2,8 +2,6 @@
 
 namespace Core;
 
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 use Core\Middleware\Middleware;
 
 class Router
@@ -57,7 +55,7 @@ class Router
             if (($record["url"] === $url) && ($record["method"] === strtoupper($method))) {
 
                 Middleware::resolve($record['middleware']);
-                return (require basePath("Http/controllers/" . $record["controller"]));
+                return (require baseAppPath("Http/controllers/" . $record["controller"]));
                 
             }
         }

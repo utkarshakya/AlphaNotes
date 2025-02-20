@@ -3,24 +3,21 @@
 use Core\Router;
 use Core\Session;
 
-const BASE_PATH = __DIR__ . '/../';
+const BASE_PATH = __DIR__ . '/../../';
 
-require BASE_PATH . "Core/functions.php";
+require BASE_PATH . "app/Core/functions.php";
 
 session_start();
 
-spl_autoload_register(function ($class){
-    
-    $class = str_replace("\\", "/", $class);
-    require basePath("{$class}.php");
+require basePath("vendor/autoload.php");
 
-});
+loadEnv();
 
-require basePath("bootstrap.php");
+require baseAppPath("bootstrap.php");
 
 $router = new Router;
 
-require basePath("routes.php");
+require baseAppPath("routes.php");
 
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $method = $_POST["_method"] ?? $_SERVER["REQUEST_METHOD"];
@@ -28,3 +25,4 @@ $method = $_POST["_method"] ?? $_SERVER["REQUEST_METHOD"];
 $router->route($url, $method);
 
 Session::flashOutKey("errors");
+Session::flashOutKey("temp");

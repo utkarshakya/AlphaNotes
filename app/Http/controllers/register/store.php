@@ -1,55 +1,30 @@
 <?php
 
-use Core\App;
 use Core\Authenticator;
-use Core\Database;
-use Core\Validator;
+use Core\Session;
+use Http\Forms\Form;
 
-$errors = [];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-if(!Validator::string($_POST['name'])){
-    $errors["name"] = "Name Can Not Be Empty";
-    return view("register/create.view.php", [
-        "errors" => $errors
-    ]);
+$form = new Form;
+
+if ($form->validateSignup($email, $password, $name)) {
+
+    if (Authenticator::authenticateRegistration($email, $password, $name)) {
+
+        redirect("/");
+    }
+
+    $form->setErrors("message", "Account With This Email Already Exist, Try Log In");
 }
 
-if (!Validator::email($_POST['email'])) {
-    $errors["email"] = "The Email Is Invalid";
-    return view("register/create.view.php", [
-        "errors" => $errors
-    ]);
-}
-
-if(!Validator::password($_POST['password'])){
-    $errors['password'] = "Invalid Password, It must at least 8 characters long and contain a number, symbol, and both case letters";
-    return view("register/create.view.php", [
-        "errors" => $errors
-    ]);
-}
-
-$db = App::resolve(Database::class);
-
-$result = $db->query("SELECT `email` FROM `users` WHERE `email` = :email", [
-    ":email" => $_POST['email']
-])->find();
-
-if($result){
-    $errors["email"] = "Email Already Exist, Try Log In";
-    return view("register/create.view.php", [
-        "errors" => $errors
-    ]);
-}
-
-$db->query("INSERT INTO `users` (`name`, `email`, `password`) VALUES(:name, :email, :password)", [
-    ":name" => $_POST['name'],
-    ":email" => $_POST['email'],
-    ":password" => password_hash($_POST['password'], PASSWORD_DEFAULT)
+Session::flash("errors", $form->getErrors());
+Session::flash("temp", [
+    "email" => $email,
+    "password" => $password,
+    "name" => $name
 ]);
 
-Authenticator::login([
-    "name" => $_POST['name'],
-    "email" => $_POST['email']
-]);
-
-redirect("/");
+redirect("/register");

@@ -22,21 +22,26 @@ function authorize($condition, $statusCode = Response::FORBIDDEN)
     }
 }
 
-function basePath($path)
+function basePath($path = '')
 {
     return BASE_PATH . $path;
+}
+
+function baseAppPath($path)
+{
+    return BASE_PATH . "app/" . $path;
 }
 
 function view($path, $attributes = [])
 {
     extract($attributes); // This will extract the values of a array.
-    require basePath("views/{$path}");
+    require baseAppPath("views/{$path}");
 }
 
 function abort($statusCode = 404)
 {
     http_response_code($statusCode);
-    require basePath("Http/controllers/status/$statusCode.php");
+    require baseAppPath("Http/controllers/status/$statusCode.php");
     die();
 }
 
@@ -44,4 +49,10 @@ function redirect(string $path)
 {
     header("location: $path");
     die();
+}
+
+function loadEnv()
+{
+    $dotenv = Dotenv\Dotenv::createImmutable(basePath());
+    $dotenv->load();
 }

@@ -2,12 +2,16 @@
 
 use Core\App;
 use Core\Database;
+use Core\Session;
 
 $db = App::resolve(Database::class);
 
-$query = "SELECT * FROM `notes` WHERE `id` = :id";
-$result = $db->query($query, [":id" => $_GET['id']])->findOrAbort();
+$result = $db->query("SELECT * FROM `notes` WHERE `id` = :id", [
+    ":id" => $_GET['id'] ?? -1
+])->findOrAbort();
 
-authorize($result['user_id'] === 1);
+authorize($result['user_id'] === $_SESSION['user']['id']);
 
-view("notes/show.view.php", ["heading" => "Note", "result" => $result]);
+Session::flash('result', $result);
+
+view("notes/show.view.php");

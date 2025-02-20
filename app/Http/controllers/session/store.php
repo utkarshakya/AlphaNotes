@@ -4,9 +4,14 @@ use Core\Authenticator;
 use Core\Session;
 use Http\Forms\Form;
 
-if (Form::validate($email, $password)) {
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-    if (Authenticator::authenticate($email, $password)) {
+$form = new Form;
+
+if ($form->validateLogin($email, $password)) {
+
+    if (Authenticator::authenticateLogin($email, $password)) {
 
         redirect("/");
     }

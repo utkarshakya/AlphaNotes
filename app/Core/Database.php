@@ -19,7 +19,7 @@ class Database
         // change the default fetch mode to a fetch_assoc. that's it. So now we don't need to explicitly mention every time when I fetch the result.
     }
 
-    public function query(string $query, array $params = null)
+    public function query(string $query, ?array $params = null)
     {
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params); // we that this params to pass a bound parameters

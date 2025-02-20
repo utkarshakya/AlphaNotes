@@ -5,7 +5,8 @@ use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$query = "SELECT * FROM `notes` WHERE `user_id` = 1 ORDER BY `last_updated` DESC";
-$result = $db->query($query)->get();
+$result = $db->query("SELECT * FROM `notes` WHERE `user_id` = :user_id ORDER BY `updated_at` DESC", [
+    ':user_id' => $_SESSION['user']['id']
+])->get();
 
-view("notes/index.view.php", ["heading" => "Notes", "result" => $result]);
+view("notes/index.view.php", ["result" => $result]);
