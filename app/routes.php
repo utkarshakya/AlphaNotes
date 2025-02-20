@@ -5,11 +5,11 @@ $router->get("/about", "about.php");
 $router->get("/contribute", "contribute.php");
 
 $router->get("/notes", "notes/index.php")->only("auth");
-$router->get("/note", "notes/show.php");
-$router->get("/notes/create", "notes/create.php");
-$router->post("/notes", "notes/store.php");
-$router->patch("/notes", "notes/update.php");
-$router->delete("/notes", "notes/destroy.php");
+$router->get("/note", "notes/show.php")->only("auth");
+$router->get("/notes/create", "notes/create.php")->only("auth");
+$router->post("/notes", "notes/store.php")->only("auth");
+$router->patch("/notes", "notes/update.php")->only("auth");
+$router->delete("/notes", "notes/destroy.php")->only("auth");
 
 $router->get("/register", "register/create.php")->only("guest");
 $router->post("/register", "register/store.php")->only("guest");
