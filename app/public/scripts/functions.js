@@ -26,11 +26,23 @@ function editNote($textareaID, $clickedButtonID, $showButtonID) {
 function navMenu(){
 
     const hamburger = document.getElementById("hamburger")
+    const cross = document.getElementById("cross")
     const mobileMenu = document.getElementById("mobile-menu")
 
     hamburger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("h-[0px]")
-        mobileMenu.classList.toggle("overflow-hidden")
+        cross.classList.toggle("hidden")
+        hamburger.classList.toggle("hidden")
+        mobileMenu.classList.remove("h-[0px]")
+        mobileMenu.classList.add("h-[200px]")
+        mobileMenu.classList.add("pb-3")
+    })
+    
+    cross.addEventListener("click", () => {
+        cross.classList.toggle("hidden")
+        hamburger.classList.toggle("hidden")
+        mobileMenu.classList.remove("h-[200px]")
+        mobileMenu.classList.add("h-[0px]")
+        mobileMenu.classList.remove("pb-3")
     })
 
 }

@@ -1,5 +1,5 @@
-<?php require basePath("views/partials/head.php") ?>
-<?php require basePath("views/partials/nav.php") ?>
+<?php require baseAppPath("views/partials/head.php") ?>
+<?php require baseAppPath("views/partials/nav.php") ?>
 
 <main class="w-full max-w-7xl mx-auto bg-gray-50 flex flex-col items-center px-6 py-10 lg:py-20 lg:px-12">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -11,16 +11,16 @@
             <div>
                 <label for="name" class="block text-sm/6 font-medium text-gray-900">Full Name</label>
                 <div class="mt-2">
-                    <input type="text" name="name" id="name" autocomplete="name" required value="<?= $_POST['name'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $errors['name'] ?? '' ?></p>
+                    <input type="text" name="name" id="name" autocomplete="name" required value="<?= $_SESSION['temp']['name'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $_SESSION['errors']['name'] ?? '' ?></p>
                 </div>
             </div>
 
             <div>
                 <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
                 <div class="mt-2">
-                    <input type="email" name="email" id="email" autocomplete="email" required value="<?= $_POST['email'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $errors['email'] ?? '' ?></p>
+                    <input type="email" name="email" id="email" autocomplete="email" required value="<?= $_SESSION['temp']['email'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $_SESSION['errors']['email'] ?? '' ?></p>
                 </div>
             </div>
 
@@ -32,9 +32,10 @@
                         </div> -->
                 </div>
                 <div class="mt-2">
-                    <input type="password" name="password" id="password" autocomplete="current-password" required value="<?= $_POST['password'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $errors['password'] ?? '' ?></p>
+                    <input type="password" name="password" id="password" autocomplete="current-password" required value="<?= $_SESSION['temp']['password'] ?? '' ?>" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <p class="text-red-500 text-xs p-1 font-semibold"><?= $_SESSION['errors']['password'] ?? '' ?></p>
                 </div>
+                <p class="text-red-500 text-xs p-1 font-semibold text-center"><?= $_SESSION['errors']['message'] ?? '' ?></p>
             </div>
 
             <div>
@@ -53,4 +54,4 @@
 
 </script>
 
-<?php require basePath("views/partials/foot.php") ?>
+<?php require baseAppPath("views/partials/foot.php") ?>
