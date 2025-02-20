@@ -54,5 +54,5 @@ function redirect(string $path)
 function loadEnv()
 {
     $dotenv = Dotenv\Dotenv::createImmutable(basePath());
-    $dotenv->load();
+    $dotenv->safeLoad();
 }

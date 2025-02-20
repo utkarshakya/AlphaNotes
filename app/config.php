@@ -3,9 +3,9 @@
 return [
     "DB_Cloud" => [
 
-        "host" => $_ENV["DB_HOST"],
-        "port" => $_ENV["DB_PORT"],
-        "dbname" => $_ENV["DB_NAME"],
+        "host" => getenv("DB_HOST"),
+        "port" => getenv("DB_PORT"),
+        "dbname" => getenv("DB_NAME"),
         "charset" => "utf8mb4"
 
     ],
