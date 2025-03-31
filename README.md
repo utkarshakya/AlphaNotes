@@ -73,4 +73,8 @@ Alpha Notes is a simple note-taking application that allows users to create, rea
     npm run dev
     ```
 
+    Before running make sure your MySQL server is setup and running.
+
 4. Access the application in your web browser at `http://localhost:8000`.
+
+NOTE: It is recommended to use Docker because it is simple and no additional setup is required. The local setup may require additional configuration based on your system.
