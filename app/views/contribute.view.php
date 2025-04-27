@@ -10,7 +10,9 @@ if ($_SESSION['loggedIn'] ?? false) {
     <div class="w-full  mb-12">
         <h1 class="text-2xl lg:text-5xl font-bold text-gray-900">Contribute to Alpha Notes</h1>
         <p class="mt-4 text-base lg:text-lg text-gray-600">Thank you for your interest in contributing to Alpha Notes! Our project is open source, and we welcome contributions from developers, designers, writers, and enthusiasts who believe in making note-taking simpler and more accessible for everyone.</p>
-        <a href="https://github.com/utkarshakya/AlphaNotes" target="_blank" class="inline-block text-xl lg:text-2xl hover:bg-gray-200 my-5 px-5 py-3 bg-gray-300 rounded-xl">Source Code</a>
+        <div>
+            <a href="https://github.com/utkarshakya/AlphaNotes" target="_blank" class="inline-block text-xl lg:text-2xl hover:bg-gray-200 my-5 px-5 py-3 bg-gray-300 rounded-xl">Source Code</a>
+        </div>
     </div>
 
     <div class="w-full mb-12 ">
