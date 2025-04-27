@@ -5,7 +5,7 @@
     "tailwindcss": "^4.0.6"
   },
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./app/public/style/input.css -o ./app/public/style/output.css --watch",
+    "tailwind": "npx @tailwindcss/cli -i ./app/public/style/input.css -o ./app/public/style/output.css --watch --minify",
     "php": "php -S localhost:8080 -t app/public",
     "dev": "npm-run-all --parallel tailwind php"
   }
