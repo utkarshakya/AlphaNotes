@@ -1,0 +1,13 @@
+# Folders
+.git
+.vscode
+node_modules
+vendor
+
+# Files
+.dockerignore
+.env
+.env.example
+.gitignore
+docker-compose.yml
+Dockerfile

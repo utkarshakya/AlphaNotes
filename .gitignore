@@ -1,0 +1,7 @@
+# Files
+.env
+
+# Folders
+.vscode/
+vendor/
+node_modules/
